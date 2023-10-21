@@ -1,0 +1,63 @@
+.photo-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    .user-photo {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .user-photo-small{
+        width: 90px;
+        height: 90px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .user-name {
+        margin-top: 10px;
+        font-weight: bold;
+        font: 45px/54px "Open Sans",sans-serif;
+        font-weight: 700;
+        color: white;
+    }
+    .user-name-inner{
+        font-weight: bold;
+    }
+
+    .user-title {
+        color: white;
+        font: 25px/30px "Open Sans", sans-serif;
+        font-weight: 600;
+        margin-top: -35px;
+    }
+    .user-description{
+        color: white;
+        margin-top: -15px;
+    }
+}
+@media (max-width: 600px) {
+    .photo-box {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+        .user-photo-small{
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .user-name-inner{
+            display: none;
+        }
+    }
+
+}
+

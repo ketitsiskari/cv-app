@@ -1,0 +1,40 @@
+.expertise-container {
+  padding-inline-start: 35px;
+
+    .title {
+        color: #26c17e;
+        margin-bottom: 40px;
+        font: 700 25px/30px "Open Sans", sans-serif;
+    }
+  
+    
+    .experience-item {
+        display: grid;
+        grid-template-columns: 0.5fr 2.5fr;
+        align-items: center;
+    
+        .company {
+            grid-column: 1;
+            grid-row: 1;
+            font-weight: bold;
+          }
+    
+          .date {
+            grid-column: 1;
+            grid-row: 2;
+            font-style: italic;
+            margin-top: -50px;
+          }
+          .job {
+            grid-column: 2;
+            grid-row: 1;
+            font-weight: bold;
+          }
+      
+          .description {
+            grid-column: 2;
+            grid-row: 2;
+            font-size: 14px;
+          }
+        }
+}

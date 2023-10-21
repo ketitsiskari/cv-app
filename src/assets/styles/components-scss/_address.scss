@@ -1,0 +1,52 @@
+.address {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-left: 25px;
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 20px;
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+    
+            .icon {
+                padding-bottom: 10px;
+                margin-right: 10px;
+            }
+    
+            .bold {
+                font-weight: bold;
+            }
+        }
+
+        .title {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .fa-phone, .fa-envelope, .fa-twitter, .fa-facebook, .fa-skype, .fa-linkedin {
+            font-size: 22px;
+            color: green;  
+            margin-right: 10px;
+        }
+    }
+    .social-item > div {
+        display: block !important; 
+        clear: both; 
+    }
+
+    .social-icons {
+        a {
+            margin-right: 20px;
+            .title, & > div {
+                display: block;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
