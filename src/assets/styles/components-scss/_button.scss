@@ -26,6 +26,37 @@
         transition: background-color 0.3s ease;
 
     }
+    &.hamburger {
+        position: absolute;
+        width: 31px;
+        height: 32px;
+        right: 585px;
+        top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        background-color: #2c3e50;
+        padding: 5px;
+        box-sizing: border-box;
+        
+        .button-icon {
+            font-size: 24px;
+            color: white;
+        }
+
+        &.open {
+            .button-icon {
+                color: white;
+            }
+        }
+
+        &.closed {
+            color: white;
+            top: 15px;
+            left: -11px;
+        }
+    }
 }
 @media (max-width: 600px) {
     .custom-button {
@@ -38,5 +69,21 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
         
+    }
+    .button-icon {
+        font-size: 24px;
+        color: white;
+    }
+
+    &.open {
+        .button-icon {
+            color: white;
+        }
+    }
+
+    &.closed {
+        color: white;
+        top: 15px;
+        left: 0px;
     }
 }

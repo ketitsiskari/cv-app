@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import '../../assets/styles/components-scss/_button.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Button = ({ icon, text, onClick }) => {
+const Button = ({ icon, text, onClick, className }) => {
     return (
-        <button onClick={onClick} className="custom-button">
+        <button onClick={onClick} className={`custom-button ${className}`}>
             {icon && <FontAwesomeIcon icon={icon} className="button-icon" />}
             {text && <span className="button-text">{text}</span>}
         </button>
@@ -14,7 +14,7 @@ const Button = ({ icon, text, onClick }) => {
 
 Button.propTypes = {
     icon: PropTypes.object,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string
 };
 
 export default Button;

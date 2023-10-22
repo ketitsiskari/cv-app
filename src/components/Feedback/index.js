@@ -1,8 +1,7 @@
 import React from "react";
 import Button from "../Button";
 import Info from "../Info";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/styles/components-scss/_feedback.scss'
 import Box from "../../modules/BoxSection";
 
@@ -52,7 +51,8 @@ const Feedback = ({ data }) => {
       </section>
       <div className="main-container-button">
       <Button
-        icon={<FontAwesomeIcon icon={faChevronUp} />}
+        icon={ faCheck }
+        text="Some text"
         onClick={scrollToTop}
     />
       </div>

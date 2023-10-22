@@ -14,13 +14,8 @@ const Panel = (props) => {
   };
 
     return (
-        <aside className={`panel ${props.isPanelOpen ? 'open' : 'closed'}`}>
-            <div className="hamburger" onClick={props.togglePanel}>
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
+      
+        <aside className='panel'>
             <PhotoBox 
                 name="Ketevan Tsiskaridze"
                 avatar={avatar}
