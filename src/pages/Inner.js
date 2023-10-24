@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import About from '../components/Box/index';
 import Expertise from '../components/Expertise/index';
 import experiences from '../modules/Expertise';
@@ -13,25 +13,35 @@ import feedbackData from '../modules/feedbackData';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/Button';
 
-
 const InnerPage = () => {
     const [isPanelOpen, setIsPanelOpen] = useState(true);
-  
+
     const togglePanel = () => {
-      setIsPanelOpen(!isPanelOpen);
+      setIsPanelOpen(prevState => !prevState);
     };
-  
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsPanelOpen(window.innerWidth > 450);
+      };
+
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
     return (
       <div className="inner-container">
         <Button 
-                icon={faBars} 
-                onClick={togglePanel}
-                className={`hamburger ${isPanelOpen ? 'open' : 'closed'}`}
-            />
+            icon={faBars} 
+            onClick={togglePanel}
+            className={`hamburger ${isPanelOpen ? 'open' : 'closed'}`}
+        />
         {isPanelOpen && (
-        <aside className="left-panel">
             <Panel isPanelOpen={isPanelOpen} togglePanel={togglePanel} />
-        </aside>
         )}
 
         <div className="main-content">
@@ -44,20 +54,18 @@ const InnerPage = () => {
           <div id="expertise">
             <Expertise data={experiences} />
           </div>
-            <div id="portfolio">
-                <Portfolio />
-            </div>
-            <div id="contact">
-              <MyAddress/>
-            </div>
-            <div id="feedback">
-              <Feedback data={feedbackData} />
-            </div>
-            
+          <div id="portfolio">
+            <Portfolio />
+          </div>
+          <div id="contact">
+            <MyAddress/>
+          </div>
+          <div id="feedback">
+            <Feedback data={feedbackData} />
+          </div>
         </div>
-        </div>
+      </div>
   );
 };
 
 export default InnerPage;
-
