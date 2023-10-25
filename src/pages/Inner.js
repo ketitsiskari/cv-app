@@ -7,7 +7,6 @@ import Panel from '../components/Panel/index';
 import '../assets/styles/pages/_inner.scss'
 import Portfolio from '../components/Portfolio/index';
 import MyAddress from '../components/Address/index';
-import timelineEvents from '../modules/timeline';
 import { Feedback } from '../components/Feedback/index';
 import feedbackData from '../modules/feedbackData';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -49,7 +48,7 @@ const InnerPage = () => {
             <About />
           </div>
           <div id="education">
-            <TimeLine data={timelineEvents} />
+            <TimeLine />
           </div>
           <div id="expertise">
             <Expertise data={experiences} />
