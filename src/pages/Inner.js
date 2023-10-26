@@ -11,6 +11,7 @@ import { Feedback } from '../components/Feedback/index';
 import feedbackData from '../modules/feedbackData';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Button from '../components/Button';
+import { Skills } from '../components/Skills';
 
 const InnerPage = () => {
     const [isPanelOpen, setIsPanelOpen] = useState(true);
@@ -52,6 +53,9 @@ const InnerPage = () => {
           </div>
           <div id="expertise">
             <Expertise data={experiences} />
+          </div>
+          <div id='skills'>
+            <Skills/>
           </div>
           <div id="portfolio">
             <Portfolio />

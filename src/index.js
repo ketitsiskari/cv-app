@@ -14,14 +14,15 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <Router>
-    <React.StrictMode>
+  <React.StrictMode>
+    <Router>
       <Provider store={store}>
         <App />
       </Provider>
-    </React.StrictMode>
-  </Router>
+    </Router>
+  </React.StrictMode>
 );
 
 reportWebVitals();

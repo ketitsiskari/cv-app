@@ -4,6 +4,7 @@ import imagesLoaded from 'imagesloaded';
 import card3Image from '../../assets/images/card_3.png';
 import card1Image from '../../assets/images/card_1.png';
 import PortfolioInfo from './info';
+import Box from '../../modules/BoxSection';
 
 const Portfolio = () => {
     const [activeFilter, setActiveFilter] = useState('*');
@@ -66,7 +67,8 @@ const Portfolio = () => {
     ];
 
     return (
-        <div className="portfolio-container">
+        <section className="portfolio-container">
+            <Box title="Portfolio"/>
             <div className="portfolio-filters">
                 <button className={activeFilter === '*' ? 'active' : ''} onClick={() => handleFilterChange('*')}>All</button>
                 <button className={activeFilter === '.ui' ? 'active' : ''} onClick={() => handleFilterChange('.ui')}>UI</button>
@@ -80,7 +82,7 @@ const Portfolio = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 
