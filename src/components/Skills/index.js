@@ -64,7 +64,7 @@ export const Skills = () => {
           icon={faPenToSquare}
           text="Open edit"
           id="skills"
-          className="skills__button"
+          className={`skills__button`}
           onClick={handleOpen}
         />
   

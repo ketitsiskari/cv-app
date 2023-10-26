@@ -8,17 +8,21 @@
     top: -75px;
     right: 20px;
     padding: 2px 2px;
-    font-size: 17px;
+    font-size: 14px;
+    .button-icon {
+        font-size: 17px;
+        margin-right: 5px;
+    }
   }
   
   .skills__button:hover {
     background-color: #26c17e;
   }
   
-  .skills__button__icon {
-    margin-right: 2px;
-    font-size: 17px; 
-  }
+//   .skills__button .icon {
+//     margin-right: 2px;
+//     font-size: 14px; 
+//   }
   
   .skills-container {
     display: block;
