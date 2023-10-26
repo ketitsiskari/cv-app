@@ -16,7 +16,7 @@ const Feedback = ({ data }) => {
   return (
     <>
       <section id="feedback" className="feedback-section">
-        <Box title="Portfolio"/>
+        <Box title="Feedback"/>
         <div className="feedback-list">
           {data.map((item, index) => (
             <div className="feedback-item" key={index}>

@@ -1,10 +1,12 @@
 .feedback-section {
-    margin-left: 25px;
     &-item {
       margin-bottom: 40px;
     }
     .feedback-item{
         padding-bottom: 10px;
+    }
+    .feedback-list{
+      margin-left: 20px;
     }
   
     .reporter {
