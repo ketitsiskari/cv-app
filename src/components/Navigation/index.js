@@ -28,7 +28,7 @@ const Navigation = () => {
         const handleResize = () => setWindowWidth(window.innerWidth);
 
         navItems.forEach(item => {
-            sectionRefs.current[item.id] = document.getElementById(item.id); // Updated this line to get elements by their IDs
+            sectionRefs.current[item.id] = document.getElementById(item.id);
         });
 
         window.addEventListener('resize', handleResize);
@@ -46,11 +46,14 @@ const Navigation = () => {
     };
 
     return (
-        <div className="navigation">
+        <div className="navigation" data-testid="navigation">
             {navItems.map((item) => (
                 <div
                     key={item.id}
-                    className={`nav-item ${activeItem === item.id ? 'active' : ''}`}
+                    role="button"
+                    aria-label={item.label}
+                    className={`nav-item ${activeItem === item.id ? 'active' : ''}` }
+                    data-testid={`nav-item-${item.label}`}
                     onClick={() => handleItemClick(item.id)}
                 >
                     <FontAwesomeIcon icon={item.icon} className="nav-icon" />

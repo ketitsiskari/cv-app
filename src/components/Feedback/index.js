@@ -15,7 +15,7 @@ const scrollToTop = () => {
 const Feedback = ({ data }) => {
   return (
     <>
-      <section id="feedback" className="feedback-section">
+      <section id="feedback" className="feedback-section" data-testid="feedback-section">
         <Box title="Feedback"/>
         <div className="feedback-list">
           {data.map((item, index) => (
@@ -55,6 +55,7 @@ const Feedback = ({ data }) => {
         text=""
         onClick={scrollToTop}
         className={`upp-button`}
+        aria-label="scroll to top"
     />
       </div>
     </>

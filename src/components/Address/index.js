@@ -4,7 +4,7 @@ import Box from "../../modules/BoxSection";
 
 const MyAddress = () => {
     return(
-        <section id="contacts-section">
+        <section id="contacts-section" data-testid="contacts-section">
                 <Box title="Contacts"/>
                 <Address 
                   phoneNumber="+995 557 72 77 88"

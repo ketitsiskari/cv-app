@@ -15,8 +15,9 @@ const Panel = ({ isPanelOpen, togglePanel }) => {
     };
 
     return (
-      <div className="panel-container">
-        <Button 
+      <div className="panel-container" data-testid="panel-container">
+        <Button
+            aria-label="hamburger menu"
             icon={faBars} 
             onClick={togglePanel}
             className={`hamburger ${isPanelOpen ? 'open' : 'closed'}`}
@@ -31,7 +32,10 @@ const Panel = ({ isPanelOpen, togglePanel }) => {
                   viewType={2} 
               />
               <Navigation />
-              <Button icon={faChevronLeft} text="Go back" onClick={handleGoBackClick} />
+              <Button 
+              class="custom-button hamburger open" 
+              icon={faChevronLeft} text="Go back" 
+              onClick={handleGoBackClick} />
             </aside>
           </div>
         )}

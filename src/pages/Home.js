@@ -13,7 +13,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home-container">
+    <div data-testid="home-container" className="home-container">
       <PhotoBox
         name="John Doe" 
         title="Programmer. Creative. Innovator" 

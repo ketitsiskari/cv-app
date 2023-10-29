@@ -6,7 +6,7 @@ const Expertise = ({ data }) => {
   return (
     <section>
         <Box title="Experience"/>
-        <div className="expertise-container">
+        <div className="expertise-container" data-testid="expertise-container">
         {data.map((experience, index) => (
             <div key={index} className="experience-item">
             <span className="company">{experience.info.company}</span>

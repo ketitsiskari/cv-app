@@ -4,7 +4,7 @@ import '../../assets/styles/components-scss/_photoBox.scss';
 
 const PhotoBox = ({ name, title, description, avatar, viewType = 1 }) => {
     return (
-        <div className={`photo-box ${viewType === 2 ? 'inner-view' : ''}`}>
+        <div data-testid="photo-box" className={`photo-box ${viewType === 2 ? 'inner-view' : ''}`}>
             <img src={avatar} alt={name} className={viewType === 2 ? 'user-photo-small' : 'user-photo'} />
             <h2 className={viewType === 2 ? 'user-name-inner' : 'user-name'}>{name}</h2>
             

@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchEducation } from '../../features/education/educationSlice';
 import '../../assets/styles/components-scss/_timeLine.scss';
 import Box from '../../modules/BoxSection';
-import timelineEvents from '../../modules/timeline'; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,17 +11,16 @@ const TimeLine = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.educations.data);
   const status = useSelector((state) => state.educations.status);
+  const displayData = Array.isArray(data.educations) ? data.educations : [];
 
   useEffect(() => {
     dispatch(fetchEducation());
   }, [dispatch]);
 
-  const displayData = (status === 'success' && data.length) ? data : timelineEvents;
-
   return (
     <section className="timeline-container">
       <Box title="Education" />
-      
+
       {status === "loading" && (
         <div className="loading-overlay">
           <FontAwesomeIcon
@@ -33,24 +31,30 @@ const TimeLine = () => {
         </div>
       )}
 
-      {status === 'failed' && <p>Something went wrong; please review your server connection!</p>}
-      
-      {status !== 'loading' && (
+      {status === "failed" && (
+        <p>Something went wrong; please review your server connection!</p>
+      )}
+
+      {status !== "loading" && (
         <div className="timeline-list" role="list">
-          {displayData.map((item, index) => (
-            <div key={item.id || index} className="timeline-item" role="listitem">
-              <time className="timeline-year" dateTime={item.date.toString()}>
-                {item.date}
-              </time>
-              <div className="timeline-content">
-                <div className="timeline-content-info">
-                  <h3>{item.title}</h3>
-                  {item.subTitle && <h4>{item.subTitle}</h4>}
-                  <p>{item.text}</p>
+          {displayData.length === 0 && status === "success" ? (
+            <p>No education data available.</p>
+          ) : (
+            displayData.map((item, index) => (
+              <div key={item.id || index} className="timeline-item" role="listitem">
+                <time className="timeline-year" dateTime={item.date.toString()}>
+                  {item.date}
+                </time>
+                <div className="timeline-content">
+                  <div className="timeline-content-info">
+                    <h3>{item.title}</h3>
+                    {item.subTitle && <h4>{item.subTitle}</h4>}
+                    <p>{item.text || item.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       )}
     </section>
