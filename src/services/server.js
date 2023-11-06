@@ -9,22 +9,28 @@ export function makeServer() {
 
     seeds(server) {
       server.create("education", {
-        date: 2021,
-        title: "Title 0",
+        date: 2015,
+        title: "Dentist",
         description:
-          "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.\r\n",
+          "I have graduated from Tbilisi State Medical University with a Master's degree and my educational background in medicine allows me to understand and anticipate the needs of healthcare professionals and patients, ensuring the development of insightful and compliant medical web applications.\r\n",
       });
       server.create("education", {
-        date: 2000,
-        title: "Title 1",
+        date: 2016,
+        title: "Residency in dentistry",
         description:
-          "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.\r\n",
+          "Successfully completed the national dental licensing examination, becoming a licensed Doctor of Dentistry.\r\n",
       });
       server.create("education", {
-        date: 2012,
-        title: "Title 2",
+        date: 2022,
+        title: "Courses of Entrepreneurship amd WordPress development",
         description:
-          "Elit voluptate ad nostrud laboris. Elit incididunt mollit enim enim id id laboris dolore et et mollit. Mollit adipisicing ullamco exercitation ullamco proident aute enim nisi. Dolore eu fugiat consectetur nulla sunt Lorem ex ad. Anim eiusmod do tempor fugiat minim do aliqua amet ex dolore velit.\r\n",
+          "Completed the WE-Tech program by Georgian American University, enhancing my skills in new technologies and innovations through practical involvement with GeoLab.Advanced my expertise in digital entrepreneurship and WordPress development through courses offered by Kants Academy.\r\n",
+      });
+      server.create("education", {
+        date: 2023,
+        title: "FrontEnd",
+        description:
+          "Enhanced Front-End development expertise through EPAM's upskill program, staying abreast of the latest trends and methodologies in the field.\r\n",
       });
     },
 

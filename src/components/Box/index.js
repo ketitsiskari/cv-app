@@ -5,7 +5,13 @@ const About = () => {
         <section data-testid="about-section">
             <Box 
             title="About me" 
-            content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque" />
+            content="I am a passionate and detail-oriented Front-End Developer.
+             My journey in the tech industry has been marked by constant learning and application of
+             modern web technologies, ensuring that I deliver up-to-date and high-performing web solutions.
+             I am a dynamic professional who synergizes a robust background in dental medicine with cutting-edge 
+             expertise in front-end web development. A licensed dentist with a creative and analytical approach to
+              problem-solving, I have augmented my substantial experience with advanced technological training, including 
+              the prestigious EPAM upskill program in Front-End development, to hone my skills in creating sophisticated and user-centric digital solutions." />
         </section>  
     );
 

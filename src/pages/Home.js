@@ -15,9 +15,9 @@ const Home = () => {
   return (
     <div data-testid="home-container" className="home-container">
       <PhotoBox
-        name="John Doe" 
-        title="Programmer. Creative. Innovator" 
-        description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque" 
+        name="Ketevan Tsiskaridze" 
+        title="Programmer. FrontEnd Developer" 
+        description="A lifelong learner who keeps up-to-date with industry trends and continually seeks out new technologies and methods to master" 
         avatar={avatar}
         viewType={1} // viewType={2} for the second view
       />
